@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.container {
+  width: 100%;
+}
+.container .bgSection {
+  float: left;
+  width: 50%;
+}
+.container .bgSection h1 {
+  height: 60px;
+  margin: 10px 0 0 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.container .bgSection #frame {
+  width: 100%;
+  height: 100vh;
+}
+.container .bgSection #frame .panels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+.container .bgSection #frame .panels li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.container .bgSection #frame .panels li.on img {
+  opacity: 1;
+  transform: scale(1.03);
+}
+.container .bgSection #frame .panels li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.5s, transform 4s;
+}
+.container .mask {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.container .login {
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  width: 25%;
+  height: 60%;
+  text-align: center;
+  border-radius: 30px;
+  padding: 50px;
+  background-color: #eee;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.container .login h2.sublogo {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #003377;
+}
+.container .login h2.sublogo::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #003377;
+}
+.container .login span.sublogo {
+  display: block;
+  font-size: 10px;
+  margin: 5px auto 80px;
+}
+.container .login .loginInput {
+  width: 280px;
+  margin: 10px auto;
+}
+.container .login .loginInput input {
+  float: left;
+  width: 180px;
+  height: 35px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.container .login .loginInput input::placeholder {
+  padding-left: 10px;
+}
+.container .login .loginInput a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 90px;
+  height: 90px;
+  background-color: navy;
+  border-radius: 5px;
+}
+.container .login input[type=checkbox] {
+  cursor: pointer;
+}
+.container .login select {
+  cursor: pointer;
+}
+.container .login .searchPwd,
+.container .login .signIn,
+.container .login .helpDesk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.container .login .searchPwd a,
+.container .login .signIn a,
+.container .login .helpDesk a {
+  margin-left: 10px;
+}
+.container .login .searchPwd a span,
+.container .login .signIn a span,
+.container .login .helpDesk a span {
+  font-size: 14px;
+  color: #003377;
+}
+.container .login .helpDesk {
+  margin-bottom: 50px;
+}
+.container .login .notice {
+  font-size: 15px;
+}
+.container .login .notice p {
+  margin-bottom: 30px;
+}
+.container .login .notice span {
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */
