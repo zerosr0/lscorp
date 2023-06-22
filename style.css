@@ -14,20 +14,26 @@ a {
   height: 20px;
 }
 
-.container {
-  width: 100%;
-}
-.container .bgSection {
-  float: left;
-  width: 50%;
-}
-.container .bgSection h1 {
+h1 {
   height: 60px;
   margin: 10px 0 0 15px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
+}
+
+.container {
+  width: 100%;
+}
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .bgSection {
+  float: left;
+  width: 50%;
 }
 .container .bgSection #frame {
   width: 100%;
@@ -59,6 +65,21 @@ a {
   opacity: 0;
   transform: scale(1);
   transition: opacity 0.5s, transform 4s;
+}
+.container .bgMobile {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.container .bgMobile figure {
+  width: 100%;
+  height: 100%;
+}
+.container .bgMobile figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .container .mask {
   width: 100%;
@@ -95,7 +116,7 @@ a {
 .container .login span.sublogo {
   display: block;
   font-size: 10px;
-  margin: 5px auto 80px;
+  margin: 5px auto 60px;
 }
 .container .login .loginInput {
   width: 280px;
@@ -146,6 +167,11 @@ a {
   font-size: 14px;
   color: #003377;
 }
+.container .login .searchPwd:hover a span,
+.container .login .signIn:hover a span,
+.container .login .helpDesk:hover a span {
+  color: crimson;
+}
 .container .login .helpDesk {
   margin-bottom: 50px;
 }
@@ -157,6 +183,73 @@ a {
 }
 .container .login .notice span {
   font-size: 13px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container .login {
+    left: 52%;
+    width: 40%;
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+  .container::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .container .bgSection {
+    display: none;
+  }
+  .container .bgMobile {
+    display: block;
+  }
+  .container .login {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 340px;
+    height: 70%;
+    padding: 20px 10px;
+  }
+  .container .login span.sublogo {
+    margin: 5px auto 40px;
+  }
+  .container .login .loginInput input {
+    height: 30px;
+    margin-bottom: 5px;
+  }
+  .container .login .loginInput a {
+    width: 80px;
+    height: 75px;
+  }
+  .container .login .searchPwd,
+  .container .login .signIn,
+  .container .login .helpDesk {
+    margin-top: 5px;
+  }
+  .container .login .searchPwd a,
+  .container .login .signIn a,
+  .container .login .helpDesk a {
+    margin-left: 10px;
+  }
+  .container .login .searchPwd a span,
+  .container .login .signIn a span,
+  .container .login .helpDesk a span {
+    font-size: 12px;
+  }
+  .container .login .helpDesk {
+    margin-bottom: 30px;
+  }
+  .container .login .notice {
+    font-size: 14px;
+  }
+  .container .login .notice span {
+    font-size: 11px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

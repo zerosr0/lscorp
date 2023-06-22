@@ -1,5 +1,8 @@
-const frame = document.querySelector('#frame');
+const bgSection = document.querySelector('.bgSection');
+const bgMobile = document.querySelector('.bgMobile');
+const frame = bgSection.querySelector('#frame');
 const panels = frame.querySelectorAll('.panels li');
+
 
 const len = panels.length - 1;
 const interval = 4000;
@@ -11,9 +14,15 @@ window.onload = () => {
   startRolling();
 };
 
-//window.addEventListener("resize", () => {
-//  startRolling();
-//})
+// window.addEventListener("resize", () => {
+//   if (window.innerWidth >= 1200) {
+//     bgSection.classList.add('on');
+//     bgMobile.classList.remove('on');
+//   } else {
+//     bgMobile.classList.add('on');
+//     bgSection.classList.remove('on');
+//   }
+// })
 
 //패널 활성화함수
 function activation(index) {
