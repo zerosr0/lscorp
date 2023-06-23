@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("static/Montserrat-Regular.ttf") format("ttf"), url("static/Montserrat-ExtraBold.ttf") format("ttf");
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 }
 
 a {
@@ -132,6 +137,7 @@ h1 {
   float: left;
   width: 180px;
   height: 35px;
+  border: 1px solid #999;
   border-radius: 5px;
   margin-bottom: 8px;
   padding-left: 10px;
@@ -140,9 +146,10 @@ h1 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5px;
   color: #fff;
   width: 90px;
-  height: 87px;
+  height: 82px;
   background-color: navy;
   border-radius: 5px;
 }
@@ -154,6 +161,9 @@ h1 {
 }
 .container .login .loginInput .saveId input[type=checkbox] {
   cursor: pointer;
+}
+.container .login .loginInput .saveId label {
+  font-size: 14px;
 }
 .container .login .loginInput select {
   float: right;
@@ -170,7 +180,7 @@ h1 {
 .container .login .searchPwd a,
 .container .login .signIn a,
 .container .login .helpDesk a {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .container .login .searchPwd a span,
 .container .login .signIn a span,
