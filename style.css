@@ -119,33 +119,44 @@ h1 {
   margin: 5px auto 60px;
 }
 .container .login .loginInput {
-  width: 280px;
+  width: 290px;
   margin: 10px auto;
 }
-.container .login .loginInput input {
+.container .login .loginInput::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .login .loginInput input[type=text],
+.container .login .loginInput input[type=password] {
   float: left;
   width: 180px;
   height: 35px;
   border-radius: 5px;
-  margin-bottom: 10px;
-}
-.container .login .loginInput input::placeholder {
+  margin-bottom: 8px;
   padding-left: 10px;
 }
-.container .login .loginInput a {
+.container .login .loginInput .loginBtn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   width: 90px;
-  height: 90px;
+  height: 87px;
   background-color: navy;
   border-radius: 5px;
 }
-.container .login input[type=checkbox] {
+.container .login .loginInput .saveId {
+  width: 70%;
+  float: left;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.container .login .loginInput .saveId input[type=checkbox] {
   cursor: pointer;
 }
-.container .login select {
+.container .login .loginInput select {
+  float: right;
   cursor: pointer;
 }
 .container .login .searchPwd,
@@ -173,7 +184,7 @@ h1 {
   color: crimson;
 }
 .container .login .helpDesk {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .container .login .notice {
   font-size: 15px;
@@ -182,7 +193,7 @@ h1 {
   margin-bottom: 30px;
 }
 .container .login .notice span {
-  font-size: 13px;
+  font-size: 11px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -192,7 +203,7 @@ h1 {
     padding: 30px;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
   .container {
     width: 100%;
   }
@@ -246,9 +257,6 @@ h1 {
   }
   .container .login .notice {
     font-size: 14px;
-  }
-  .container .login .notice span {
-    font-size: 11px;
   }
 }
 
